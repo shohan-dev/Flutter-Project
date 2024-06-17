@@ -1,11 +1,11 @@
-# Flutter Basics
+# 🛠️ Flutter Projects Collection
 
-This repository contains basic code examples for Flutter, showcasing essential concepts and components. It serves as a foundation for anyone looking to get started with Flutter development.
+Welcome to the Flutter Projects Collection! This repository contains a variety of small Flutter projects designed to showcase different functionalities and features. Each section below provides details about a specific project, including installation instructions, usage, and output examples.
 
-## Overview
+---
 
-This repository includes:
+## 📅 Time and Date Picker
 
-- Fundamental Flutter code snippets
-- Comprehensive examples to understand core Flutter concepts
-- Step-by-step guides to build basic Flutter applications
+This Flutter project demonstrates how to implement a time and date picker in a Flutter application.
+
+### Project Directory : https://github.com/shohan1010/Flutter-Code/tree/main/Time%20and%20Date
