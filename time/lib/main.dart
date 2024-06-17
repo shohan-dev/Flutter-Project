@@ -6,15 +6,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Timer',
+      title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primarySwatch: Colors.deepPurple,
       ),
       home: const HomeScreen(),
     );
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -31,6 +30,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   late String _dateTimeString;
   late Timer _timer;
+  DateTime? _selectedDate;
+  TimeOfDay? _selectedTime;
 
   @override
   void initState() {
@@ -52,6 +53,32 @@ class _HomeScreenState extends State<HomeScreen> {
         dateTime.toLocal().toString().split(' ')[1].split('.')[0];
   }
 
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2000),
+      lastDate: DateTime(2101),
+    );
+    if (picked != null && picked != _selectedDate) {
+      setState(() {
+        _selectedDate = picked;
+      });
+    }
+  }
+
+  Future<void> _selectTime(BuildContext context) async {
+    final TimeOfDay? picked = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay.now(),
+    );
+    if (picked != null && picked != _selectedTime) {
+      setState(() {
+        _selectedTime = picked;
+      });
+    }
+  }
+
   @override
   void dispose() {
     _timer.cancel();
@@ -63,14 +90,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Timer'),
-        backgroundColor: Colors.deepPurple,
       ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: <Widget>[
               const Text(
                 'Flutter Timer',
                 style: TextStyle(
@@ -95,6 +121,53 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () => _selectDate(context),
+                child: const Text('Select Date'),
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.deepPurple,
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+                ),
+              ),
+              const SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () => _selectTime(context),
+                child: const Text('Select Time'),
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.deepPurple,
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+                ),
+              ),
+              const SizedBox(height: 20),
+              if (_selectedDate != null)
+                Text(
+                  'Selected Date: ${_selectedDate!.toString().split(" ")[0]}',
+                  style: const TextStyle(
+                    fontSize: 20,
+                    color: Colors.deepPurple,
+                  ),
+                ),
+              if (_selectedTime != null)
+                Text(
+                  'Selected Time: ${_selectedTime!.format(context)}',
+                  style: const TextStyle(
+                    fontSize: 20,
+                    color: Colors.deepPurple,
+                  ),
+                ),
             ],
           ),
         ),
