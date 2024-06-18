@@ -12,7 +12,7 @@ This Flutter project demonstrates how to implement a time and date picker in a F
 
 ---
 
-## 🖩 Calculator
+## <img src="https://github.com/shohan1010/Flutter-Code/assets/59328735/4025535f-e131-4f48-a26a-433d47f22b80" width="20" height="20"> Calculator
 
 This Flutter project showcases a calculator application built using Flutter.
 
