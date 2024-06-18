@@ -8,4 +8,12 @@ Welcome to the Flutter Projects Collection! This repository contains a variety o
 
 This Flutter project demonstrates how to implement a time and date picker in a Flutter application.
 
-### Project Directory : https://github.com/shohan1010/Flutter-Code/tree/main/Time%20and%20Date
+### Project Directory: [Time and Date Picker](https://github.com/shohan1010/Flutter-Code/tree/main/Time%20and%20Date)
+
+---
+
+## 🖩 Calculator
+
+This Flutter project showcases a calculator application built using Flutter.
+
+### Project Directory: [Calculator](https://github.com/shohan1010/Flutter-Code/tree/main/Calculator)
