@@ -17,3 +17,10 @@ This Flutter project demonstrates how to implement a time and date picker in a F
 This Flutter project showcases a calculator application built using Flutter.
 
 ### Project Directory: [Calculator](https://github.com/shohan1010/Flutter-Code/tree/main/Calculator)
+
+---
+## <img src="https://github.com/shohan1010/Flutter-Code/assets/59328735/735a29d2-b673-4e5f-8542-9cb1ebfc4bf7" width="20" height="20"> BMI Calculator
+
+This Flutter project implements a BMI (Body Mass Index) calculator to compute BMI based on height and weight inputs.
+
+### Project Directory: [BMI Calculator](https://github.com/shohan1010/Flutter-Code/tree/main/BMI%20Calculator)
