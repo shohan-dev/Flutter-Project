@@ -100,5 +100,3 @@ For more detailed examples and code snippets, please refer to the official Flutt
 ---
 
 Feel free to explore the different animation types and incorporate them into your Flutter projects. Happy coding! 🚀
-
-
