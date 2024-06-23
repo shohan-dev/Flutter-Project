@@ -1,3 +1,4 @@
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/AnimatedPositioned.dart';
 import 'package:flutter/material.dart';
 
 class ImplicitAnimationsScreen extends StatelessWidget {
@@ -35,19 +36,7 @@ class ImplicitAnimationsScreen extends StatelessWidget {
         ),
       ),
     },
-    {
-      'name': AnimatedPositioned(
-        duration: Duration(seconds: 1),
-        left: 50.0,
-        top: 50.0,
-        child: Container(
-          width: 200.0,
-          height: 200.0,
-          color: Colors.blue,
-          child: Center(child: Text('AnimatedPositioned')),
-        ),
-      ),
-    },
+    {'name': PositionDemo()},
     {
       'name': AnimatedDefaultTextStyle(
         duration: Duration(seconds: 1),
