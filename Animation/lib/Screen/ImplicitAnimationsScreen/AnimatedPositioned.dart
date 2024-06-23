@@ -12,18 +12,18 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('AnimatedPositioned Example'),
         ),
-        body: PositionDemo(),
+        body: position_animation(),
       ),
     );
   }
 }
 
-class PositionDemo extends StatefulWidget {
+class position_animation extends StatefulWidget {
   @override
-  _PositionDemoState createState() => _PositionDemoState();
+  _position_animationState createState() => _position_animationState();
 }
 
-class _PositionDemoState extends State<PositionDemo> {
+class _position_animationState extends State<position_animation> {
   bool _isMoved = false;
 
   @override

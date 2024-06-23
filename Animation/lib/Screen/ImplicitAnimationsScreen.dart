@@ -36,7 +36,7 @@ class ImplicitAnimationsScreen extends StatelessWidget {
         ),
       ),
     },
-    {'name': PositionDemo()},
+    {'name': position_animation()},
     {
       'name': AnimatedDefaultTextStyle(
         duration: Duration(seconds: 1),
