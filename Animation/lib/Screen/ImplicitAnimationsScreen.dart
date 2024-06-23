@@ -1,4 +1,4 @@
-import 'package:aniamtion/Screen/ImplicitAnimationsScreen/AnimatedPositioned.dart';
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/position_animation.dart';
 import 'package:flutter/material.dart';
 
 class ImplicitAnimationsScreen extends StatelessWidget {

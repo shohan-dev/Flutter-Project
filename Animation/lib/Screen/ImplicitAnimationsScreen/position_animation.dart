@@ -1,23 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('AnimatedPositioned Example'),
-        ),
-        body: position_animation(),
-      ),
-    );
-  }
-}
-
 class position_animation extends StatefulWidget {
   @override
   _position_animationState createState() => _position_animationState();
