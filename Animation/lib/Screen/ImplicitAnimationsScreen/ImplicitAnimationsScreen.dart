@@ -1,51 +1,17 @@
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Align_Animation.dart';
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Container_Animation.dart';
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Default_text_animation.dart';
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Opacity_Animation.dart';
 import 'package:aniamtion/Screen/ImplicitAnimationsScreen/position_animation.dart';
 import 'package:flutter/material.dart';
 
 class ImplicitAnimationsScreen extends StatelessWidget {
   final List<Map<String, Widget>> animationTypes = [
-    {
-      'name': AnimatedContainer(
-        duration: Duration(seconds: 1),
-        width: 200.0,
-        height: 200.0,
-        color: Colors.blue,
-        child: Center(child: Text('AnimatedContainer')),
-      ),
-    },
-    {
-      'name': AnimatedOpacity(
-        duration: Duration(seconds: 1),
-        opacity: 0.5,
-        child: Container(
-          width: 200.0,
-          height: 200.0,
-          color: Colors.blue,
-          child: Center(child: Text('AnimatedOpacity')),
-        ),
-      ),
-    },
-    {
-      'name': AnimatedAlign(
-        alignment: Alignment.centerLeft,
-        duration: Duration(seconds: 1),
-        child: Container(
-          width: 200.0,
-          height: 200.0,
-          color: Colors.blue,
-          child: Center(child: Text('AnimatedAlign')),
-        ),
-      ),
-    },
-    {'name': position_animation()},
-    {
-      'name': AnimatedDefaultTextStyle(
-        duration: Duration(seconds: 1),
-        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-        child: Center(
-          child: Text('AnimatedDefaultTextStyle'),
-        ),
-      ),
-    },
+    {'name': Container_Animation()},
+    {'name': Opacity_Animation()},
+    {'name': Align_Animation()},
+    {'name': Position_Animation()},
+    {'name': DefaultTextAnimation()},
   ];
 
   @override

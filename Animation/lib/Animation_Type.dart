@@ -1,5 +1,5 @@
 import 'package:aniamtion/Other.dart';
-import 'package:aniamtion/Screen/ImplicitAnimationsScreen.dart';
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/ImplicitAnimationsScreen.dart';
 import 'package:flutter/material.dart';
 
 class Animation_Type extends StatelessWidget {

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class position_animation extends StatefulWidget {
+class Position_Animation extends StatefulWidget {
   @override
-  _position_animationState createState() => _position_animationState();
+  _Position_AnimationState createState() => _Position_AnimationState();
 }
 
-class _position_animationState extends State<position_animation> {
+class _Position_AnimationState extends State<Position_Animation> {
   bool _isMoved = false;
 
   @override

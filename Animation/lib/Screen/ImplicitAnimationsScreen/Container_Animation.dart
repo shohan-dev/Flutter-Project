@@ -1,29 +1,11 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class Container_Animation extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('AnimatedContainer Example'),
-        ),
-        body: ContainerDemo(),
-      ),
-    );
-  }
+  _Container_AnimationState createState() => _Container_AnimationState();
 }
 
-class ContainerDemo extends StatefulWidget {
-  @override
-  _ContainerDemoState createState() => _ContainerDemoState();
-}
-
-class _ContainerDemoState extends State<ContainerDemo> {
+class _Container_AnimationState extends State<Container_Animation> {
   bool _isExpanded = false;
 
   @override

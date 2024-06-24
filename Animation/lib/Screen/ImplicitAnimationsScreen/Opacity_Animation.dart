@@ -12,18 +12,18 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('AnimatedOpacity Example'),
         ),
-        body: OpacityDemo(),
+        body: Opacity_Animation(),
       ),
     );
   }
 }
 
-class OpacityDemo extends StatefulWidget {
+class Opacity_Animation extends StatefulWidget {
   @override
-  _OpacityDemoState createState() => _OpacityDemoState();
+  _Opacity_AnimationState createState() => _Opacity_AnimationState();
 }
 
-class _OpacityDemoState extends State<OpacityDemo> {
+class _Opacity_AnimationState extends State<Opacity_Animation> {
   bool _isOpaque = true;
 
   @override

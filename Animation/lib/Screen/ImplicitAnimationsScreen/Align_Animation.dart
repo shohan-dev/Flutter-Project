@@ -1,29 +1,11 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class Align_Animation extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('AnimatedAlign Example'),
-        ),
-        body: AlignDemo(),
-      ),
-    );
-  }
+  _Align_AnimationState createState() => _Align_AnimationState();
 }
 
-class AlignDemo extends StatefulWidget {
-  @override
-  _AlignDemoState createState() => _AlignDemoState();
-}
-
-class _AlignDemoState extends State<AlignDemo> {
+class _Align_AnimationState extends State<Align_Animation> {
   Alignment _alignment = Alignment.centerLeft;
 
   @override
@@ -44,9 +26,9 @@ class _AlignDemoState extends State<AlignDemo> {
             width: 200.0,
             height: 200.0,
             color: Colors.blue,
-            child: const Center(
+            child: Center(
               child: Padding(
-                padding: EdgeInsets.all(30.0),
+                padding: const EdgeInsets.all(30.0),
                 child: Text(
                   'Tap to Change Alignment',
                   style: TextStyle(
