@@ -13,6 +13,9 @@ class _DefaultTextAnimationState extends State<DefaultTextAnimation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Default Text Animation'),
+      ),
       body: Center(
         child: GestureDetector(
           onTap: () {

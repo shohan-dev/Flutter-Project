@@ -10,29 +10,35 @@ class _Position_AnimationState extends State<Position_Animation> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        AnimatedPositioned(
-          duration: Duration(seconds: 1),
-          left: _isMoved ? 150.0 : 50.0,
-          top: _isMoved ? 150.0 : 50.0,
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                _isMoved = !_isMoved;
-              });
-            },
-            child: Container(
-              width: 200.0,
-              height: 200.0,
-              color: Colors.blue,
-              child: Center(
-                  child: Text('Tap to Move',
-                      style: TextStyle(color: Colors.white))),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Position Animation'),
+      ),
+      body: Stack(
+        children: <Widget>[
+          AnimatedPositioned(
+            duration: Duration(seconds: 1),
+            left: _isMoved ? 150.0 : 20.0,
+            top: _isMoved ? 350.0 : 20.0,
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  _isMoved = !_isMoved;
+                });
+              },
+              child: Container(
+                margin: EdgeInsets.all(52.0),
+                width: 200.0,
+                height: 200.0,
+                color: Colors.blue,
+                child: Center(
+                    child: Text('Tap to Move',
+                        style: TextStyle(color: Colors.white))),
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

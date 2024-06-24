@@ -1,17 +1,25 @@
-import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Align_Animation.dart';
-import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Container_Animation.dart';
-import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Default_text_animation.dart';
-import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Opacity_Animation.dart';
-import 'package:aniamtion/Screen/ImplicitAnimationsScreen/position_animation.dart';
 import 'package:flutter/material.dart';
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Container_Animation.dart';
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Opacity_Animation.dart';
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Align_Animation.dart';
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Position_Animation.dart';
+import 'package:aniamtion/Screen/ImplicitAnimationsScreen/Default_text_animation.dart';
 
 class ImplicitAnimationsScreen extends StatelessWidget {
-  final List<Map<String, Widget>> animationTypes = [
-    {'name': Container_Animation()},
-    {'name': Opacity_Animation()},
-    {'name': Align_Animation()},
-    {'name': Position_Animation()},
-    {'name': DefaultTextAnimation()},
+  final List<Widget> animationTypes = [
+    Container_Animation(),
+    Opacity_Animation(),
+    Align_Animation(),
+    Position_Animation(),
+    DefaultTextAnimation(),
+  ];
+
+  final List<String> animationNames = [
+    'Container Animation',
+    'Opacity Animation',
+    'Align Animation',
+    'Position Animation',
+    'Default Text Animation',
   ];
 
   @override
@@ -33,11 +41,8 @@ class ImplicitAnimationsScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => Scaffold(
-                    appBar: AppBar(
-                      title: Text('Animation Example'),
-                    ),
                     body: Center(
-                      child: animationTypes[index]['name'],
+                      child: animationTypes[index],
                     ),
                   ),
                 ),
@@ -47,11 +52,7 @@ class ImplicitAnimationsScreen extends StatelessWidget {
               margin: EdgeInsets.all(16.0),
               child: Center(
                 child: Text(
-                  animationTypes[index]['name']
-                      .runtimeType
-                      .toString()
-                      .replaceAll('Animated', '')
-                      .replaceAll('Center', ''),
+                  animationNames[index],
                   style: TextStyle(fontSize: 18.0),
                 ),
               ),

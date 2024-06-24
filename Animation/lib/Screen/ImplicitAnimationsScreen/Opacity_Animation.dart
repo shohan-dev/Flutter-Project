@@ -28,30 +28,35 @@ class _Opacity_AnimationState extends State<Opacity_Animation> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: GestureDetector(
-        onTap: () {
-          setState(() {
-            _isOpaque = !_isOpaque;
-          });
-        },
-        child: Center(
-          child: AnimatedOpacity(
-            duration: Duration(seconds: 1),
-            opacity: _isOpaque ? 1.0 : 0.5,
-            child: Container(
-              width: 200.0,
-              height: 200.0,
-              color: Colors.blue,
-              child: const Center(
-                child: Padding(
-                  padding: EdgeInsets.all(30.0),
-                  child: Text(
-                    'Tap to Change Opacity',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Animated Opacity Example'),
+      ),
+      body: Center(
+        child: GestureDetector(
+          onTap: () {
+            setState(() {
+              _isOpaque = !_isOpaque;
+            });
+          },
+          child: Center(
+            child: AnimatedOpacity(
+              duration: Duration(seconds: 1),
+              opacity: _isOpaque ? 1.0 : 0.5,
+              child: Container(
+                width: 200.0,
+                height: 200.0,
+                color: Colors.blue,
+                child: const Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(30.0),
+                    child: Text(
+                      'Tap to Change Opacity',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
