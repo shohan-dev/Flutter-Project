@@ -19,7 +19,7 @@ class ImplicitAnimationsScreen extends StatelessWidget {
     'Opacity Animation',
     'Align Animation',
     'Position Animation',
-    'Default Text Animation',
+    'Text Animation',
   ];
 
   @override
