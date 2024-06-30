@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class HeroAnimationsScreen extends StatelessWidget {
   final List<String> imageUrls = [
     'https://cdn.promptden.com/images/41e0bc09-2b0f-4ba2-855c-afd51c4c38a2.webp?class=thumbnail',
     'https://cdn.promptden.com/images/d2b1ab00-885b-4b75-a5fe-43fc6d8628d7.png?class=thumbnail',
@@ -22,7 +18,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Multiple Grid View Images'),
+          title: Text('Hero Animation'),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
         body: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

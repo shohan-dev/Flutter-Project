@@ -17,23 +17,6 @@ class ExplicitAnimationsScreen extends StatelessWidget {
   }
 }
 
-class HeroAnimationsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Hero Animations'),
-      ),
-      body: Center(
-        child: Text(
-          'Screen demonstrating Hero Animations',
-          style: TextStyle(fontSize: 24.0),
-        ),
-      ),
-    );
-  }
-}
-
 class PhysicsBasedAnimationsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

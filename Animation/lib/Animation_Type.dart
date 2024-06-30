@@ -1,4 +1,5 @@
 import 'package:aniamtion/Other.dart';
+import 'package:aniamtion/Screen/HeroAnimationsScreen/HeroAnimationsScreen.dart';
 import 'package:aniamtion/Screen/ImplicitAnimationsScreen/ImplicitAnimationsScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,7 @@ class Animation_Type extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Animation Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
