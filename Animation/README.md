@@ -43,9 +43,7 @@ Full control over animations using `AnimationController` and `Tween`.
 
 Create seamless transitions between screens with shared element animations.
 
-<p align="center">
-  <img src="https://flutter.dev/images/catalog-widget-placeholder.png" alt="Hero Animation Example" width="300">
-</p>
+
 
 ---
 
