@@ -42,25 +42,28 @@ class MyApp extends StatelessWidget {
                   ),
                 );
               },
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 1,
-                      blurRadius: 3,
-                      offset: Offset(0, 3), // changes position of shadow
+              child: Hero(
+                tag: imageUrls[index], // Unique tag for each image
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 3,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10.0),
+                    child: Image.network(
+                      imageUrls[index],
+                      width: 150,
+                      height: 150,
+                      fit: BoxFit.cover,
                     ),
-                  ],
-                ),
-                child: Hero(
-                  tag: 'imageHero$index', // Unique tag for each image
-                  child: Image.network(
-                    imageUrls[index],
-                    width: 150,
-                    height: 150,
-                    fit: BoxFit.cover,
                   ),
                 ),
               ),
@@ -80,9 +83,6 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Detail Page'),
-      ),
       body: GestureDetector(
         onTap: () {
           Navigator.pop(context);
@@ -92,12 +92,9 @@ class DetailPage extends StatelessWidget {
             tag: imageUrl,
             child: Image.network(
               imageUrl,
-              width:
-                  MediaQuery.of(context).size.width, // Full width of the screen
-              height: MediaQuery.of(context)
-                  .size
-                  .height, // Full height of the screen
               fit: BoxFit.cover,
+              width: double.infinity,
+              height: double.infinity,
             ),
           ),
         ),
