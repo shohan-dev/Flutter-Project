@@ -23,9 +23,7 @@ Simple animations with minimal code, ideal for known start and end values.
 - `AnimatedOpacity`
 - `AnimatedAlign`
 
-<p align="center">
-  <img src="https://flutter.dev/images/catalog-widget-placeholder.png" alt="Implicit Animation Example" width="300">
-</p>
+
 
 ---
 
@@ -37,9 +35,7 @@ Full control over animations using `AnimationController` and `Tween`.
 - `AnimatedBuilder`
 - `Transition`
 
-<p align="center">
-  <img src="https://flutter.dev/images/catalog-widget-placeholder.png" alt="Explicit Animation Example" width="300">
-</p>
+
 
 ---
 
