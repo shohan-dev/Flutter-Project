@@ -56,9 +56,6 @@ Real-world physics simulations for natural movement.
 - `GravitySimulation`
 - `FrictionSimulation`
 
-<p align="center">
-  <img src="https://flutter.dev/images/catalog-widget-placeholder.png" alt="Physics-based Animation Example" width="300">
-</p>
 
 ---
 
