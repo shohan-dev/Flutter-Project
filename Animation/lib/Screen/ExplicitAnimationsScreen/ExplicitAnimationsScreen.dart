@@ -132,7 +132,7 @@ class _ExplicitAnimationsScreenState extends State<ExplicitAnimationsScreen> {
                   width: 100,
                   height: 100,
                   decoration: BoxDecoration(
-                    color: Colors.orange,
+                    color: Colors.blue,
                     borderRadius: BorderRadius.circular(10.0),
                     boxShadow: [
                       BoxShadow(
@@ -164,7 +164,7 @@ class _ExplicitAnimationsScreenState extends State<ExplicitAnimationsScreen> {
                 style: TextStyle(color: Colors.white, fontSize: 18.0),
               ),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.teal,
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8.0),
