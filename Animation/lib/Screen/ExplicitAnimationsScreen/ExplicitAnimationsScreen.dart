@@ -52,7 +52,7 @@ class _ExplicitAnimationsScreenState extends State<ExplicitAnimationsScreen> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             GestureDetector(
               onTap: _toggleContainer,
@@ -77,7 +77,17 @@ class _ExplicitAnimationsScreenState extends State<ExplicitAnimationsScreen> {
               child: AnimatedOpacity(
                 opacity: _opacityLevel,
                 duration: Duration(seconds: 1),
-                child: FlutterLogo(size: 100.0),
+                child: Container(
+                  width: 100.0,
+                  height: 100.0,
+                  color: Colors.green,
+                  child: Center(
+                    child: Text(
+                      'Animated Opacity',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
               ),
             ),
             SizedBox(height: 20.0),
@@ -104,7 +114,9 @@ class _ExplicitAnimationsScreenState extends State<ExplicitAnimationsScreen> {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () => _navigateToGridView(context),
-              child: Text('Go to GridView'),
+              child:
+                  Text('Go to GridView', style: TextStyle(color: Colors.white)),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
             ),
           ],
         ),
