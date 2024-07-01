@@ -59,13 +59,28 @@ class _ExplicitAnimationsScreenState extends State<ExplicitAnimationsScreen> {
               child: AnimatedContainer(
                 width: _containerToggled ? 200.0 : 100.0,
                 height: _containerToggled ? 100.0 : 200.0,
-                color: _containerToggled ? Colors.blue : Colors.red,
-                duration: Duration(seconds: 1),
-                curve: Curves.fastOutSlowIn,
+                decoration: BoxDecoration(
+                  color: _containerToggled ? Colors.blue : Colors.red,
+                  borderRadius: BorderRadius.circular(12.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 5.0,
+                      spreadRadius: 2.0,
+                      offset: Offset(2, 2),
+                    ),
+                  ],
+                ),
+                duration: Duration(milliseconds: 500),
+                curve: Curves.easeInOut,
                 child: Center(
                   child: Text(
-                    'Tap to Animate Container',
-                    style: TextStyle(color: Colors.white),
+                    _containerToggled ? 'Expanded' : 'Collapsed',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -76,15 +91,30 @@ class _ExplicitAnimationsScreenState extends State<ExplicitAnimationsScreen> {
               onTap: _changeOpacity,
               child: AnimatedOpacity(
                 opacity: _opacityLevel,
-                duration: Duration(seconds: 1),
+                duration: Duration(milliseconds: 500),
                 child: Container(
                   width: 100.0,
                   height: 100.0,
-                  color: Colors.green,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(50.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 5.0,
+                        spreadRadius: 2.0,
+                        offset: Offset(2, 2),
+                      ),
+                    ],
+                  ),
                   child: Center(
                     child: Text(
-                      'Animated Opacity',
-                      style: TextStyle(color: Colors.white),
+                      'Opacity',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -96,16 +126,31 @@ class _ExplicitAnimationsScreenState extends State<ExplicitAnimationsScreen> {
               child: AnimatedAlign(
                 alignment:
                     _isAligned ? Alignment.centerRight : Alignment.centerLeft,
-                duration: Duration(seconds: 1),
+                duration: Duration(milliseconds: 500),
                 curve: Curves.easeInOut,
                 child: Container(
                   width: 100,
                   height: 100,
-                  color: Colors.blue,
+                  decoration: BoxDecoration(
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.circular(10.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 5.0,
+                        spreadRadius: 2.0,
+                        offset: Offset(2, 2),
+                      ),
+                    ],
+                  ),
                   child: Center(
                     child: Text(
-                      'Tap to Align',
-                      style: TextStyle(color: Colors.white),
+                      'Alignment',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -114,9 +159,17 @@ class _ExplicitAnimationsScreenState extends State<ExplicitAnimationsScreen> {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () => _navigateToGridView(context),
-              child:
-                  Text('Go to GridView', style: TextStyle(color: Colors.white)),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+              child: Text(
+                'Go to GridView',
+                style: TextStyle(color: Colors.white, fontSize: 18.0),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                padding: EdgeInsets.symmetric(vertical: 16.0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+              ),
             ),
           ],
         ),
@@ -178,11 +231,11 @@ class _AnimatedGridItemState extends State<AnimatedGridItem> {
     return GestureDetector(
       onTap: _toggle,
       child: AnimatedContainer(
-        duration: Duration(seconds: 1),
-        curve: Curves.fastOutSlowIn,
+        duration: Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
         decoration: BoxDecoration(
           color: _isToggled ? Colors.green : Colors.orange,
-          borderRadius: BorderRadius.circular(15.0),
+          borderRadius: BorderRadius.circular(12.0),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.2),
