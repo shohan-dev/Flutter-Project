@@ -3,5 +3,5 @@ import 'package:aniamtion/Screen/ExplicitAnimationsScreen/ExplicitAnimationsScre
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(ExplicitAnimationsScreen());
+  runApp(Animation_Type());
 }

@@ -26,7 +26,7 @@ class _ExplicitAnimationsScreenState extends State<ExplicitAnimationsScreen> {
 
   void _changeOpacity() {
     setState(() {
-      _opacityLevel = _opacityLevel == 1.0 ? 0.0 : 1.0;
+      _opacityLevel = _opacityLevel == 1.0 ? 0.1 : 1.0;
     });
   }
 
